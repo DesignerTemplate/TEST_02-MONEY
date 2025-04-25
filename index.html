@@ -1,1 +1,51 @@
+import * as React from 'react'
+import { Scene, Storyboard } from 'utopia-api'
+import { App } from '../src/app'
+import { Playground } from '../src/playground'
+
+export var storyboard = (
+  <Storyboard>
+    <Scene
+      id='main-page-scene'
+      style={{
+        width: 1600,
+        height: 1000,
+        position: 'absolute',
+        left: 100,
+        top: 100,
+        backgroundColor: '#f5f5f5',
+        fontFamily: 'Merriweather, serif',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: 40,
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: 'white',
+          padding: 20,
+          borderRadius: 8,
+          boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+          width: '45%',
+        }}
+      >
+        <h2 style={{ fontWeight: 700, fontSize: 20 }}>Playground</h2>
+        <Playground />
+      </div>
+      <div
+        style={{
+          backgroundColor: 'white',
+          padding: 20,
+          borderRadius: 8,
+          boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+          width: '45%',
+        }}
+      >
+        <h2 style={{ fontWeight: 700, fontSize: 20 }}>My App</h2>
+        <App />
+      </div>
+    </Scene>
+  </Storyboard>
+)
 
